@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Attendance Tracker</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<header><h1>🕒 Attendance Tracker</h1></header>
+
+<main>
+  <section id="login-section">
+    <h2>Login</h2>
+    <input id="username" placeholder="Username" />
+    <input id="password" type="password" placeholder="Password" />
+    <button onclick="login()">Log in</button>
+    <p id="login-error" class="error"></p>
+  </section>
+
+  <section id="app-section" style="display:none;">
+    <p>Welcome, <span id="welcome-name"></span> (<span id="welcome-role"></span>)</p>
+    <button onclick="doCheckIn()">Check In</button>
+    <p id="checkin-result"></p>
+
+    <h3>My History</h3>
+    <table id="history-table">
+      <thead><tr><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="admin-panel" style="display:none;">
+      <h3>Daily Report (Admin)</h3>
+      <input type="date" id="report-date" />
+      <button onclick="loadReport()">Load Report</button>
+      <div id="report-summary"></div>
+    </div>
+  </section>
+</main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

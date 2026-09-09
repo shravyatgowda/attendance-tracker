@@ -1,0 +1,13 @@
+:root { --accent: #1a7a5e; --bg: #f4f9f7; --border: #d5e5df; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: var(--bg); margin: 0; }
+header { background: var(--accent); color: white; padding: 18px 30px; }
+header h1 { margin: 0; font-size: 1.3rem; }
+main { max-width: 600px; margin: 30px auto; padding: 0 20px; }
+section { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 20px; }
+input { padding: 8px; margin: 4px 4px 4px 0; border: 1px solid var(--border); border-radius: 6px; }
+button { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+.error { color: #a12626; }
+.success { color: #1a7a3a; }
